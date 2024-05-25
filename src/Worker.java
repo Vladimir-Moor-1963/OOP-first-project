@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Worker extends Person {
+public class Worker extends Person implements GoToWork {
 
 
     public Worker(String name, int age, double height, int namberOfChildren) {
@@ -33,32 +33,21 @@ public class Worker extends Person {
 
     }
 
-  // @Override
-  // public boolean equals(Object o) {
-  //     if (this == o) return true;
-  //     if (o == null || getClass() != o.getClass()) return false;
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "minPay=" + minPay +
+                ", maxPay=" + maxPay +
+                ", ADDITIONL=" + ADDITIONL +
+                ", dobdate=" + dobdate +
+                '}';
+    }
 
-  //     Worker worker = (Worker) o;
+    @Override
+    public void work() {
+        System.out.println("Я с удовольствием пошёл работать");
 
-  //     if (age != worker.age) return false;
-  //     if (eheight != worker.eheight) return false;
-  //     return Objects.equals(mame, worker.mame);
-  // }
-
-   // @Override
-   // public int hashCode() {
-   //     int result = mame != null ? mame.hashCode() : 0;
-   //     result = 31 * result + age;
-   //     result = 31 * result + eheight;
-   //     return result;
-   // }
-
-  // public Worker(String name, int age, String mame, int age1, int eheight) {
-  //     super(name, age);
-  //     this.mame = mame;
-  //     this.age = age1;
-  //     this.eheight = eheight;
-  // }
+    }
 }
 
 

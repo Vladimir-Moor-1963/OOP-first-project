@@ -1,6 +1,7 @@
 import java.util.Objects;
+import java.util.Random;
 
-public class Pensioner extends Person {
+public class Pensioner extends Person implements GoToWork {
 
   // private String name;
   // private int age;
@@ -29,13 +30,6 @@ public class Pensioner extends Person {
 
 
 
-    //@Override
-  //public double calculator() {
-  //    double sumthree = calculator. sumthree(maxWage,minWage,additional);
-  //    return sumthree;
-
-
-    //}
 
 
     @Override
@@ -45,8 +39,32 @@ public class Pensioner extends Person {
 
     }
 
+    @Override
+    public String toString() {
+        return "Pensioner{" +
+                "minPay=" + minPay +
+                ", maxPay=" + maxPay +
+                ", ADDITIONL=" + ADDITIONL +
+                ", dobdate=" + dobdate +
+                '}';
+    }
 
-}
+    @Override
+    public void work() {
+
+        Random random = new Random();
+        int namber = random.nextInt(1,3);
+        if (namber ==1){
+        System.out.println("Мне лень");
+        }
+        else{
+        System.out.println("Уговорили");
+
+
+
+
+
+}}}
 
 
 

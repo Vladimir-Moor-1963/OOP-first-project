@@ -143,6 +143,11 @@ public abstract class Person {
         result = 31 * result + dobdate.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
 
 

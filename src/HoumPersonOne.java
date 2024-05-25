@@ -8,6 +8,7 @@ public class HoumPersonOne {
         Worker worker = new Worker("Иван",51,1.75,6);
         Worker worker1 = new Worker("Jochan",51);
         Pensioner pensioner = new Pensioner("Vladimir",61,1.80,4);
+        Pensioner pensioner1 = new Pensioner("Владимир",61,1.76,3);
 
 
 
@@ -36,15 +37,13 @@ public class HoumPersonOne {
         double b = pensionFundPerson.personPensionCalculator(pensioner);
         System.out.println(b);
 
-        System.out.println(worker.hashCode());
-        System.out.println(worker1.hashCode());
-        if (worker1.hashCode() == worker.hashCode()){
-        System.out.println("Одинаковые");
-        }
-        else {
-            System.out.println("Разные");
 
-        }
+        System.out.println(worker1.equals(worker));
+        System.out.println(pensioner1.equals(pensioner));
+        worker.work();
+        pensioner.work();
+
+
         {
 
         }
