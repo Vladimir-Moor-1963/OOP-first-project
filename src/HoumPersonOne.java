@@ -9,7 +9,7 @@ public class HoumPersonOne {
         Worker worker1 = new Worker("Jochan",51);
         Pensioner pensioner = new Pensioner("Vladimir",61,1.80,4);
         Pensioner pensioner1 = new Pensioner("Владимир",61,1.76,3);
-
+        Teenager teenager = new Teenager("Виктор",15);
 
 
 
@@ -43,6 +43,11 @@ public class HoumPersonOne {
         worker.work();
         pensioner.work();
 
+        teenager.Info();
+        teenager.dobdate = LocalDate.of(2019,2,1);
+        System.out.println(teenager.dobdate);
+
+
 
         {
 
@@ -67,6 +72,7 @@ public class HoumPersonOne {
 
         worker.saiute();
         pensioner.saiute();
+        teenager.saiute();
 
 
     }
